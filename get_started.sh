@@ -28,3 +28,7 @@ sudo apt remove firefox
 # node.js
 sudo snap install node --channel=13/stable --classic
 sudo apt install -y npm
+
+#spark
+pip install pyspark
+sudo apt install openjdk-8-jre-headless
