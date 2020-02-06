@@ -1,34 +1,34 @@
+# default configuration
 echo "Install applications"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt update && sudo apt install google-chrome-beta
+sudo apt update && sudo apt install google-chrome-unstable
 
-sudo apt instal vlc
 sudo snap install postman
-
-sudo snap install pycharm-community --classic
+sudo snap install slack
+sudo snap install code
 
 echo "Install CLI utilities"
 sudo apt install curl whois
 
-echo "Install dev untilities"
+echo "Git"
 sudo apt install git
 git config --global user.email "bvz2001@gmail.com"
 git config --global user.name "Max Ostapenko"
 
-sudo apt install python
-sudo apt install python-pip
+echo "Python"
+sudo apt install python3
+sudo apt install python3-pip
 
-echo "Remove unused software"
-sudo apt remove firefox
+echo "Java"
+sudo apt install openjdk-8-jre
 
+# https://www.anaconda.com/distribution/#linux
+cd Downloads/
+bash Anaconda3-2019.10-Linux-x86_64.sh
 
 # optional packages
 
-# node.js
+echo "node.js"
 sudo snap install node --channel=13/stable --classic
 sudo apt install -y npm
-
-#spark
-pip install pyspark
-sudo apt install openjdk-8-jre-headless
