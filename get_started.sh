@@ -8,27 +8,24 @@ sudo snap install postman
 sudo snap install slack
 sudo snap install code
 
-echo "Install CLI utilities"
-sudo apt install curl whois
-
 echo "Git"
 sudo apt install git
 git config --global user.email "bvz2001@gmail.com"
 git config --global user.name "Max Ostapenko"
 
 echo "Python"
-sudo apt install python3
 sudo apt install python3-pip
 
 echo "Java"
-sudo apt install openjdk-8-jre
+sudo apt install openjdk-13-jre-headless
 
 # https://www.anaconda.com/distribution/#linux
 cd Downloads/
-bash Anaconda3-2019.10-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash Anaconda3-2020.02-Linux-x86_64.sh
 
 # optional packages
 
 echo "node.js"
-sudo snap install node --channel=13/stable --classic
-sudo apt install -y npm
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
