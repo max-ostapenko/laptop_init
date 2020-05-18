@@ -17,6 +17,7 @@ git config --global credential.helper 'cache --timeout=2592000'
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
 bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh
 
+sudo apt install python3-pip
 pip install pyre-check
 pip install -U bandit
 pip install -U pylama
