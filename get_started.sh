@@ -15,8 +15,8 @@ git config --global credential.helper 'cache --timeout=2592000'
 sudo apt install docker.io
 
 # Python
-pip install --user virtualenv
-pip install --user pipenv
+python3 -m pip install --user virtualenv
+python3 -m pip install --user pipenv
 
 # NodeJS
 echo "node.js"
